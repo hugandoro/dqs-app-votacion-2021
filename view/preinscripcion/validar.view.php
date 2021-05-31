@@ -1,7 +1,7 @@
 <!-- Vista para pantalla de login -->
 <div class="row">
     <div class="col-sm-12">
-        <h1 align="Center">Presupuesto Participativo | Dosquebradas | 2021</h1>
+        <h2 align="Center">Presupuesto participativo Dosquebradas 2021</h2>
         <h3 align="Center">Preinscripcion de cedulas</h3>
         <br><br>
     </div>
@@ -20,7 +20,7 @@
             // VALIDACION UNO - Tiene PIN
             if (!empty($ficha_ciudadano)) {
                 echo "<h1 align='Center'><B>CC $ficha_ciudadano->documento</B></h1>";
-                echo "<h1 align='Center'>" . $ficha_ciudadano->primer_nombre . " " . $ficha_ciudadano->segundo_nombre . " " . $ficha_ciudadano->primer_apellido . " " . $ficha_ciudadano->segundo_apellido . "</h1>";
+                echo "<h2 align='Center'>" . $ficha_ciudadano->primer_nombre . " " . $ficha_ciudadano->segundo_nombre . " " . $ficha_ciudadano->primer_apellido . " " . $ficha_ciudadano->segundo_apellido . "</h2>";
                 echo "<div class='alert alert-info' role='alert' align='Center'>Ya existe un PIN asignado a este documento</div>";
             }
 
@@ -29,7 +29,7 @@
                 // Primera validacion - Que este en la BD Sisben
                 if (!empty($ficha_sisben)) {
                     echo "<h1 align='Center'>Documento N° <B>$ficha_sisben->documento</B></h1>";
-                    echo "<h1 align='Center'>" . $ficha_sisben->nombre_1 . " " . $ficha_sisben->nombre_2 . " " . $ficha_sisben->apellido_1 . " " . $ficha_sisben->apellido_2 . "</h1>";
+                    echo "<h2 align='Center'>" . $ficha_sisben->nombre_1 . " " . $ficha_sisben->nombre_2 . " " . $ficha_sisben->apellido_1 . " " . $ficha_sisben->apellido_2 . "</h2>";
                     echo "<h3 align='Center'>Ud podra participar por la <B>Comuna N° $ficha_sisben->comuna</B></h3>";
                     echo "<h4 align='Center'>Barrio $ficha_sisben->barrio</h4><br><br>";
 

@@ -1,7 +1,7 @@
 <!-- Vista para pantalla de login -->
 <div class="row">
     <div class="col-sm-12">
-        <h1 align="Center">Presupuesto Participativo | Dosquebradas | 2021</h1>
+        <h2 align="Center">Presupuesto participativo Dosquebradas 2021</h2>
         <h3 align="Center">Preinscripcion de cedulas</h3>
         <br><br>
     </div>
