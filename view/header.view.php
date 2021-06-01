@@ -16,10 +16,10 @@ header("Expires: Sat, 1 Jul 2000 05:00:00 GMT"); // Fecha en el pasado - Para bo
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="/assets/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="/assets/css/bootstrap-theme.min.css" />
-  <link rel="stylesheet" href="/assets/js/jquery-ui/jquery-ui.min.css" />
-  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/bootstrap-theme.min.css" />
+  <link rel="stylesheet" href="assets/js/jquery-ui/jquery-ui.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
 
   <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
 </head>
