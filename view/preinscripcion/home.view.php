@@ -27,12 +27,4 @@
 
     <div class="col-sm-3"></div>
 
-
-    <div class="col-lg-12 col-md-12 col-xs-12" align="center">
-        <hr>
-    </div>
-
-    <div class="col-lg-12 col-md-12 col-xs-12" align="center">
-        <img src="assets/img/pasos_preinscripcion.jpg" width="100%">
-    </div> 
 </div>
