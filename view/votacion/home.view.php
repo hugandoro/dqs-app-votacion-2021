@@ -12,8 +12,7 @@
 
     <div class="col-sm-6">
 
-        <!--<form method="post" action="?c=Votacion&a=validar" role="login">-->
-        <form method="post" action="?c=Votacion&a=Index" role="login">
+        <form method="post" action="?c=Votacion&a=validar" role="login">
             <div class="form-group">
                 <input type="number" class="form-control form-control-lg" style="font-size: 16pt;" name="cedula" placeholder="Cedula" required value="" autocomplete="off" />
                 <small id="emailHelp" class="form-text text-muted">Digite su numero de idenitifacion sin puntos ni comas</small>

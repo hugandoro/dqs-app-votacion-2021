@@ -24,7 +24,8 @@
                     echo "<h2 align='Center'>" . $ficha_ciudadano->primer_nombre . " " . $ficha_ciudadano->segundo_nombre . " " . $ficha_ciudadano->primer_apellido . " " . $ficha_ciudadano->segundo_apellido . "</h2>";
                     echo "<h5 align='Center'>Su PIN de votacion N° " .  $ficha_ciudadano->pin . " disponible para participar en votacion proyectos <b>COMUNA " . $ficha_ciudadano->comuna ."</b></h5>";
 
-                    echo "<form method='post' action='?c=Votacion&a=cargarTarjeton'>";
+                    //echo "<form method='post' action='?c=Votacion&a=cargarTarjeton'>";
+                    echo "<form method='post' action='?c=Votacion&a=Index'>";
                         echo "<input id='documento' name='documento' type='hidden' value='$ficha_ciudadano->documento'>";
                         echo "<input id='comuna' name='comuna' type='hidden' value='$ficha_ciudadano->comuna'>";
                         echo "<br><hr><button type='submit' name='go' class='btn btn-success btn-lg btn-block'>Ingresar a votar</button><hr>";
