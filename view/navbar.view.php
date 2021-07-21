@@ -18,7 +18,7 @@
       <li><a href="https://presupuestoparticipativo.dosquebradas.gov.co">Sitio web | </a></li>
         <li><a href="?c=Preinscripcion&a=Index&token=<?php echo @$_GET['token']; ?>">Preinscripciones | </a></li>
         <li><a href="?c=Votacion&a=Index&token=<?php echo @$_GET['token']; ?>">Votacion | </a></li>
-        <li><a href="#">Resultados</a></li>
+        <li><a href="?c=Resultados&a=Index&token=<?php echo @$_GET['token']; ?>">Resultados</a></li>
 
       </ul>
 

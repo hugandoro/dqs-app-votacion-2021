@@ -1,5 +1,5 @@
 <?php
-class Proyectos
+class Mesas
 {
 	private $pdo;
 
@@ -13,14 +13,15 @@ class Proyectos
 	}
 
 
-	// Metodo para obtener los proyectos de una comuna
-	public function obtener_proyectos($comuna)
+	// Metodo para consultar estasdoi de la mesa CERRADA (0) y ABIERTA (1)
+	public function consultar($comuna)
 	{
 		try {
-			$stm = $this->pdo->prepare("SELECT * FROM proyectos WHERE comuna = ?");
+			$stm = $this->pdo
+				->prepare("SELECT * FROM mesas WHERE comuna = ?");
+
 			$stm->execute(array($comuna));
-			return $stm->fetchAll(PDO::FETCH_OBJ);
-			
+			return $stm->fetch(PDO::FETCH_OBJ);
 		} catch (Exception $e) {
 			die($e->getMessage());
 		}

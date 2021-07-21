@@ -1,0 +1,17 @@
+SELECT
+p.comuna as numero_comuna,
+p.id as id_proyecto,
+p.proyecto as proyecto,
+
+COUNT(*) as conteo_votos
+
+FROM votos AS v
+
+INNER JOIN proyectos AS p
+ON v.proyectos_id = p.id
+
+WHERE  p.comuna = 1
+
+GROUP BY p.proyecto
+
+ORDER BY conteo_votos DESC

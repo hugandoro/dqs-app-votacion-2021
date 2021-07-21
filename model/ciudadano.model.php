@@ -56,6 +56,20 @@ class Ciudadano
 			//return $this->pdo->lastInsertId(); //Retorna el ID (Autoincremental) del registro que se acaba de crear
 	}
 
+	// Metodo para consumir PIN de votacion
+	public function consumir_pin($documento)
+	{
+		try {
+			$stm = $this->pdo->prepare("UPDATE ciudadano SET estado_pin = '1' WHERE documento = ?");
+
+			$stm->execute(array($documento));
+			return TRUE;
+			
+		} catch (Exception $e) {
+			die($e->getMessage());
+		}
+	}
+
 	// Metodo para validar en BD CEDULA y PIN para proceder a votar
 	public function validar_pin($cedula,$pin)
 	{

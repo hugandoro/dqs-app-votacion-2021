@@ -2,7 +2,7 @@
 <div class="row">
     <div class="col-sm-12">
         <h2 align="Center">Presupuesto participativo Dosquebradas 2021</h2>
-        <h3 align="Center">Votacion - Proyectos de la comuna N° <b><?php echo $_REQUEST['comuna']; ?></b></h3>
+        <h3 align="Center">Votacion - Proyectos de la comuna N° <b><?php if (isset($_REQUEST['comuna'])) echo $_REQUEST['comuna']; ?></b></h3>
         <br><br>
     </div>
 </div>
@@ -14,17 +14,17 @@
 
         <?php
 
-        //Valida que se tenga una ficha de ciudadano con datos para mostrar
+        //Valida que se este enviando un objeto proyecto_comuna señal que se valido un usuario para votar
         if (isset($proyectos_comuna)) {
 
-            // VALIDACION UNO - Combinacion VALIDADA - Cedula y PIN
+            // Valida que existan proyectos inscritos en la comuna
             if (!empty($proyectos_comuna)) {
                 echo "<table class='table'>";
 
                     //Titutlos del tarjeton
                     echo "<tr>";
-                        echo "<td style='width: 10%;'></td>";
-                        echo "<td style='width: 70%;'><b>Descripcion del proyecto</b></td>";
+                        echo "<td style='width: 15%;'></td>";
+                        echo "<td style='width: 65%;'><b>Descripcion del proyecto</b></td>";
                         echo "<td style='width: 20%;'><b>Accion</b></td>";
                     echo "</tr>";
 
@@ -37,7 +37,7 @@
                             echo "</td>";
 
                             echo "<td>";
-                                echo $proyecto->proyecto;
+                                echo "<h4>$proyecto->proyecto</h4>";
                             echo "</td>";
 
                             echo "<td>";
