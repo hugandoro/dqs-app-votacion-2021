@@ -22,6 +22,10 @@
                 echo "<center><small id='emailHelp' class='form-text text-muted'>Gracias por participar y cumplir con su deber civico en este proceso de Presupuesto Paticipativo 2021, una vez cerrada la jornada, le invitamos a consultar los resultados en el sitio web <a href='https://presupuestoparticipativo.dosquebradas.gov.co'>presupuestoparticipativo.dosquebradas.gov.co</a> opcion N° 5 Resultados</small></center>";
                 echo "<br><hr><a href='?c=Votacion&a=Index&token=" . @$_GET['token'] . "'><button type='submit' name='go' class='btn btn-lg btn-info btn-block'>Regresar al menu principal</button></a><hr>";
             }
+            elseif ($mesa->estado == 0) {
+                echo "<div class='alert alert-warning' role='alert' align='Center'><h4 align='Center'>Lo sentimos VOTO NO REGISTRADO, MESA CERRADA por fin de jornada</h4></div>";
+                echo "<br><hr><a href='?c=Votacion&a=Index&token=" . @$_GET['token'] . "'><button type='submit' name='go' class='btn btn-lg btn-info btn-block'>Regresar al menu principal</button></a><hr>";    
+            }
 
         }
 

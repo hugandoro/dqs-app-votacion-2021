@@ -79,6 +79,8 @@ class VotacionController
     {
         $voto_registrado = FALSE;
         $pin_consumido = FALSE;
+        $mesa = new Mesas();
+
 
         //Validad que se este recibiendo un documento
         if (isset($_REQUEST['documento'])) {
@@ -86,11 +88,16 @@ class VotacionController
             $proyecto_id = $_REQUEST['proyecto_id'];
             $comuna = $_REQUEST['comuna'];
 
-            //Registra el voto (Resultado esperado TRUE)
-            $voto_registrado = $this->modelVotos->registrar_voto($documento, $proyecto_id);
+            //Consultar estado de la mesa
+            $mesa = $this->modelMesas->consultar($comuna);
+
+            if ($mesa->estado == 1) {
+                //Registra el voto (Resultado esperado TRUE)
+                $voto_registrado = $this->modelVotos->registrar_voto($documento, $proyecto_id);
             
-            //Consume el PIN ( Estado a 1 - Resultado esperado TRUE)
-            $pin_consumido = $this->modelCiudadano->consumir_pin($documento);
+                //Consume el PIN ( Estado a 1 - Resultado esperado TRUE)
+                $pin_consumido = $this->modelCiudadano->consumir_pin($documento);
+            }
 
             require_once 'view/header.view.php';
             require_once 'view/navbar.view.php';
